@@ -16,7 +16,7 @@ set softtabstop=4                       " 编辑时 <TAB> 使用的空格数
 set shiftwidth=4                        " （自动）缩进时补出的空格数
 set autoindent                          " 根据上一行决定新行的缩进
 set list                                " 显示 <TAB> 和 <EOL>
-set listchars=tab:\|\ ,trail:▫          " <TAB> 使用 \|\ 显示，<EOL> 使用 ▫ 显示
+set listchars=tab:\┆\ ,trail:▫          " <TAB> 使用 \┆\ 显示，<EOL> 使用 ▫ 显示
 set scrolloff=5                         " 光标上下的最小行数
 set ttimeoutlen=0                       " 键盘代码超时时间
 set notimeout                           " 映射和键盘代码不等待超时
@@ -264,7 +264,6 @@ Plug 'theniceboy/nvim-deus'
 Plug 'mbbill/undotree'
 Plug 'junegunn/goyo.vim'
 Plug 'mhinz/vim-startify'
-
 
 
 call plug#end()

@@ -48,7 +48,6 @@ set hlsearch                            " 高亮匹配搜索
 set incsearch                           " 边输入边高亮搜索
 set mouse=                              " 禁用鼠标
 
-" 每次vim在加载文件时，都执行:nohlsearch命令，关闭此次高亮
 exec "nohlsearch"
 
 
@@ -251,3 +250,64 @@ noremap ti :+tabnext<CR>
 " 移动当前Tab的左右位置，也可以理解为翻转堆栈
 noremap tmn :-tabmove<CR>
 noremap tmi :+tabmove<CR>
+
+
+
+" ==================== vim-plugins ====================
+
+call plug#begin('$HOME/.config/nvim/plugged')
+
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'theniceboy/nvim-deus'
+
+Plug 'mbbill/undotree'
+Plug 'junegunn/goyo.vim'
+Plug 'mhinz/vim-startify'
+
+
+
+call plug#end()
+
+
+
+" ==================== vim-plugins-configuration ====================
+
+" ===
+" === vim-airline
+" ===
+let g:airline_theme='deus'
+
+
+" ===
+" === nvim-deus
+" ===
+set background=dark
+colorscheme deus
+let g:deus_termcolors=256
+
+
+" ===
+" === undotree
+" ===
+nnoremap L :UndotreeToggle<CR>
+let g:undotree_DiffAutoOpen = 1
+let g:undotree_SetFocusWhenToggle = 1
+let g:undotree_ShortIndicators = 1
+let g:undotree_WindowLayout = 2
+let g:undotree_DiffpanelHeight = 8
+let g:undotree_SplitWidth = 24
+function g:Undotree_CustomMap()
+	nmap <buffer> u <plug>UndotreeNextState
+	nmap <buffer> e <plug>UndotreePreviousState
+	nmap <buffer> U 5<plug>UndotreeNextState
+	nmap <buffer> E 5<plug>UndotreePreviousState
+endfunc
+
+
+" ===
+" === goyo
+" ===
+noremap <LEADER>gy :Goyo<CR>
+let g:goyo_width = 95
+let g:goyo_height = 100

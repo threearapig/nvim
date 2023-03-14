@@ -57,7 +57,7 @@
 	"importCost.debug": false,
 	"snippets.ultisnips.directories": [
 		"$HOME/.config/nvim/Ultisnips/",
-		"$HOME/.config/nvim/plugged/vim-snippets/UltiSnips/"
+		"$HOME/.config/nvim/ultiSnips/"
 	],
 	"signature.target": "float",
 	"yank.enableCompletion": false,
